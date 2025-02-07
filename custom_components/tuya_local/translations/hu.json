@@ -101,6 +101,13 @@
     },
     "entity": {
         "binary_sensor": {
+            "direction": {
+                "name": "Irány",
+                "state": {
+                    "off": "Bejövő",
+                    "on": "Kimenő"
+                }
+            },
             "defrost": {
                 "name": "Leolvasztani",
                 "state": {
@@ -180,6 +187,7 @@
                 }
             },
             "thermostat": {
+                "name": "Hőmérséklet szabályozó",
                 "state_attributes": {
                     "fan_mode": {
                         "state": {
@@ -304,7 +312,8 @@
                             "medium": "Közepes",
                             "high": "Magas",
                             "continuous": "Folyamatos",
-                            "intermittent": "Időszakos"
+                            "intermittent": "Időszakos",
+                            "timer": "Időzítő"
                         }
                     }
                 }
@@ -339,7 +348,9 @@
                             "sleep": "Alvás",
                             "auto": "Auto",
                             "eco": "Eco",
-                            "anti-condensation": "Pára mentesítés"
+                            "anti-condensation": "Pára mentesítés",
+                            "extractor": "Kivonat",
+                            "heat_recovery": "Hővisszanyerés"
                         }
                     }
                 }
@@ -440,11 +451,31 @@
                     "cake": "Sütemény",
                     "bread": "Kenyér",
                     "toast": "Pirítós",
+                    "sausage": "Kolbász",
+                    "dry_fruit": "Szárított gyümölcs",
                     "custom": "Egyéni",
                     "cloud_recipe": "Felhő recept",
                     "default": "Alapértelmezett",
                     "keep_warm": "Melegen tartás",
                     "preheat": "Előmelegítés"
+                }
+            },
+            "scene": {
+                "name": "Jelenet",
+                "state": {
+                    "relax": "Pihenés",
+                    "movie": "Film",
+                    "party": "Buli",
+                    "romantic": "Romantikus",
+                    "night": "Éjszaka",
+                    "morning": "Reggel",
+                    "working": "Munka",
+                    "leisure": "Szabadidő",
+                    "vacation": "Szabadság",
+                    "reading": "Olvasás",
+                    "twinkle": "Csillogás",
+                    "gaming": "Játék",
+                    "none": "Nincs"
                 }
             },
             "timer": {
@@ -536,6 +567,16 @@
             }
         },
         "sensor": {
+            "air_quality": {
+                "name": "Levegő minőség",
+                "state": {
+                    "excellent": "Kiváló",
+                    "good": "Jó",
+                    "moderate": "Közepes",
+                    "poor": "Rossz",
+                    "severe": "Súlyos"
+                }
+            },
             "status": {
                 "name": "Állapot",
                 "state": {
@@ -619,6 +660,16 @@
                     "pause": "Főzés szüneteltetve"
                 }
             },
+            "water_level": {
+                "name": "Vízszint",
+                "state": {
+                    "full": "Teljes",
+                    "empty": "Üres",
+                    "medium": "Közepes",
+                    "low": "Alacsony",
+                    "high": "Magas"
+                }
+            },
             "energy_produced": {
                 "name": "Termelt energia"
             },
@@ -630,6 +681,15 @@
             },
             "energy_consumed_x": {
                 "name": "Fogyasztott energia {x}"
+            },
+            "current_x": {
+                "name": "Áram {x}"
+            },
+            "voltage_x": {
+                "name": "Feszültség {x}"
+            },
+            "power_x": {
+                "name": "Teljesítmény {x}"
             }
         },
         "switch": {
@@ -645,11 +705,25 @@
             "keytone": {
                 "name": "Billentyűhang"
             },
+            "outlet_x": {
+                "name": "Csatlakozó {x}"
+            },
             "sleep": {
                 "name": "Alvás"
             },
+            "switch_x": {
+                "name": "Kapcsoló {x}"
+            },
+            "electrolytic_sterilization": {
+                "name": "Elektrolitikus szterilizálás"
+            },
             "uv_sterilization": {
                 "name": "UV sterilizálás"
+            }
+        },
+        "text": {
+            "scene": {
+                "name": "Jelenet"
             }
         }
     }

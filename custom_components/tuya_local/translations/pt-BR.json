@@ -100,6 +100,13 @@
     },
     "entity": {
         "binary_sensor": {
+            "direction": {
+                "name": "Direção",
+                "state": {
+                    "off": "Entrada",
+                    "on": "Saída"
+                }
+            },
             "defrost": {
                 "name": "Descongelar",
                 "state": {
@@ -179,6 +186,7 @@
                 }
             },
             "thermostat": {
+                "name": "Termostato",
                 "state_attributes": {
                     "fan_mode": {
                         "state": {
@@ -303,7 +311,8 @@
                             "medium": "Médio",
                             "high": "Alto",
                             "continuous": "Contínuo",
-                            "intermittent": "Intermitente"
+                            "intermittent": "Intermitente",
+                            "timer": "Temporizador"
                         }
                     }
                 }
@@ -338,7 +347,9 @@
                             "sleep": "Dormir",
                             "auto": "Auto",
                             "eco": "Ecológico",
-                            "anti-condensation": "Anti-condensação"
+                            "anti-condensation": "Anti-condensação",
+                            "extractor": "Extrator",
+                            "heat_recovery": "Recuperação de calor"
                         }
                     }
                 }
@@ -439,11 +450,31 @@
                     "cake": "Bolo",
                     "bread": "Pão",
                     "toast": "Torrada",
+                    "sausage": "Salsicha",
+                    "dry_fruit": "Fruta seca",
                     "custom": "Personalizado",
                     "cloud_recipe": "Receita da nuvem",
                     "default": "Padrão",
                     "keep_warm": "Manter quente",
                     "preheat": "Pré-aquecer"
+                }
+            },
+            "scene": {
+                "name": "Cena",
+                "state": {
+                    "relax": "Relaxar",
+                    "movie": "Filme",
+                    "party": "Festa",
+                    "romantic": "Romântico",
+                    "night": "Noite",
+                    "morning": "Manhã",
+                    "working": "Trabalhando",
+                    "leisure": "Lazer",
+                    "vacation": "Férias",
+                    "reading": "Lendo",
+                    "twinkle": "Cintilar",
+                    "gaming": "Jogando",
+                    "none": "Nenhum"
                 }
             },
             "timer": {
@@ -535,6 +566,16 @@
             }
         },
         "sensor": {
+            "air_quality": {
+                "name": "Qualidade do ar",
+                "state": {
+                    "excellent": "Excelente",
+                    "good": "Bom",
+                    "moderate": "Moderado",
+                    "poor": "Ruim",
+                    "severe": "Severo"
+                }
+            },
             "status": {
                 "name": "Status",
                 "state": {
@@ -618,6 +659,16 @@
                     "pause": "Pausa no cozimento"
                 }
             },
+            "water_level": {
+                "name": "Nível de água",
+                "state": {
+                    "full": "Cheio",
+                    "high": "Alto",
+                    "medium": "Médio",
+                    "low": "Baixo",
+                    "empty": "Vazio"
+                }
+            },
             "energy_produced": {
                 "name": "Energia produzida"
             },
@@ -629,6 +680,15 @@
             },
             "energy_consumed_x": {
                 "name": "Energia consumida {x}"
+            },
+            "current_x": {
+                "name": "Corrente {x}"
+            },
+            "voltage_x": {
+                "name": "Tensão {x}"
+            },
+            "power_x": {
+                "name": "Potência {x}"
             }
         },
         "switch": {
@@ -644,11 +704,25 @@
             "keytone": {
                 "name": "Tom do teclado"
             },
+            "outlet_x": {
+                "name": "Tomada {x}"
+            },
             "sleep": {
                 "name": "Dormir"
             },
+            "switch_x": {
+                "name": "Interruptor {x}"
+            },
+            "electrolytic_sterilization": {
+                "name": "Esterilização eletrolítica"
+            },
             "uv_sterilization": {
                 "name": "Esterilização UV"
+            }
+        },
+        "text": {
+            "scene": {
+                "name": "Cena"
             }
         }
     }

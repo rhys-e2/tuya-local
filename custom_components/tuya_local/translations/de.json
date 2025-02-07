@@ -100,6 +100,13 @@
     },
     "entity": {
         "binary_sensor": {
+            "direction": {
+                "name": "Richtung",
+                "state": {
+                    "off": "In",
+                    "on": "Out"
+                }
+            },
             "defrost": {
                 "name": "Defrost",
                 "state": {
@@ -179,6 +186,7 @@
                 }
             },
             "thermostat": {
+                "name": "Thermostat",
                 "state_attributes": {
                     "fan_mode": {
                         "state": {
@@ -302,7 +310,8 @@
                             "medium": "Mittel",
                             "high": "Hoch",
                             "continuous": "Dauerbetrieb",
-                            "intermittent": "Intervall"
+                            "intermittent": "Intervall",
+                            "timer": "Timer"
                         }
                     }
                 }
@@ -337,7 +346,9 @@
                             "sleep": "Schlafen",
                             "auto": "Auto",
                             "eco": "Eco",
-                            "anti-condensation": "Anti-Kondensation"
+                            "anti-condensation": "Anti-Kondensation",
+                            "extractor": "Abluft",
+                            "heat_recovery": "Wärmerückgewinnung"
                         }
                     }
                 }
@@ -438,11 +449,31 @@
                     "cake": "Kuchen",
                     "bread": "Brot",
                     "toast": "Toast",
+                    "sausage": "Wurst",
+                    "dry_fruit": "Trockenfrüchte",
                     "custom": "Benutzerdefiniert",
                     "cloud_recipe": "Cloud-Rezept",
                     "default": "Standard",
                     "keep_warm": "Warmhalten",
                     "preheat": "Vorheizen"
+                }
+            },
+            "scene": {
+                "name": "Szene",
+                "state": {
+                    "relax": "Entspannen",
+                    "movie": "Film",
+                    "party": "Party",
+                    "romantic": "Romantisch",
+                    "night": "Nacht",
+                    "morning": "Morgen",
+                    "working": "Arbeiten",
+                    "leisure": "Freizeit",
+                    "vacation": "Urlaub",
+                    "reading": "Lesen",
+                    "twinkle": "Blinken",
+                    "gaming": "Spielen",
+                    "none": "Keine Szene"
                 }
             },
             "timer": {
@@ -534,6 +565,16 @@
             }
         },
         "sensor": {
+            "air_quality": {
+                "name": "Luftqualität",
+                "state": {
+                    "excellent": "Ausgezeichnet",
+                    "good": "Gut",
+                    "moderate": "Mäßig",
+                    "poor": "Schlecht",
+                    "severe": "Schwer"
+                }
+            },
             "status": {
                 "name": "Status",
                 "state": {
@@ -618,6 +659,16 @@
                     "pause": "Kochen pausiert"
                 }
             },
+            "water_level": {
+                "name": "Wasserstand",
+                "state": {
+                    "empty": "Leer",
+                    "low": "Niedrig",
+                    "medium": "Mittel",
+                    "high": "Hoch",
+                    "full": "Voll"
+                }
+            },
             "energy_produced": {
                 "name": "Produzierte Energie"
             },
@@ -629,6 +680,15 @@
             },
             "energy_consumed_x": {
                 "name": "Verbrauchte Energie {x}"
+            },
+            "current_x": {
+                "name": "Strom {x}"
+            },
+            "voltage_x": {
+                "name": "Spannung {x}"
+            },
+            "power_x": {
+                "name": "Leistung {x}"
             }
         },
         "switch": {
@@ -644,11 +704,25 @@
             "keytone": {
                 "name": "Tastenton"
             },
+            "outlet_x": {
+                "name": "Steckdose {x}"
+            },
             "sleep": {
                 "name": "Schlafen"
             },
+            "switch_x": {
+                "name": "Schalter {x}"
+            },
+            "electrolytic_sterilization": {
+                "name": "Elektrolytische Sterilisation"
+            },
             "uv_sterilization": {
                 "name": "UV Sterilization"
+            }
+        },
+        "text": {
+            "scene": {
+                "name": "Szene"
             }
         }
     }
