@@ -1,0 +1,142 @@
+name: Arlec RGBCW Light 3.5
+products:
+  - id: qgibeqzjwdnn0rnf
+    manufacturer: Arlec
+    model: Twinsel (2)
+    model_id: GLD310HA
+    name: Arlec RGBCW Smart Light 3.5
+  - id: 94pamlryknqk3hif
+    manufacturer: Arlec
+    model: Twinsel (2)
+    model_id: GLD312HA
+    name: Arlec RGBCW Smart Light 3.5
+
+entities:
+  - entity: light
+    dps:
+      - id: 20
+        type: boolean
+        name: switch
+      
+      - id: 21
+        type: string
+        name: color_mode
+        mapping:
+          - dps_val: white
+            value: color_temp
+          - dps_val: colour
+            value: hs
+          - dps_val: scene
+            value: scene
+          - dps_val: music
+            value: music
+      
+      - id: 22
+        type: integer
+        name: brightness
+        range:
+          min: 10
+          max: 1000
+        mapping:
+          - scale: 0.255  # Convert 10-1000 range to 0-255 HA range
+      
+      - id: 23
+        type: integer
+        name: color_temp
+        range:
+          min: 0
+          max: 1000
+        mapping:
+          - target_range:
+              min: 2700
+              max: 6500
+
+      - id: 25
+        type: json
+        name: scene_data
+        optional: true
+
+      - id: 28
+        type: json
+        name: control_data
+        optional: true
+
+  - entity: number
+    name: Countdown Timer
+    category: config
+    class: duration
+    dps:
+      - id: 26
+        type: integer
+        name: value
+        unit: min
+        range:
+          min: 0
+          max: 86400
+        mapping:
+          - scale: 60  # Convert seconds to minutes
+          - step: 60   # 1 minute steps
+
+  - entity: switch
+    name: Do Not Disturb
+    category: config
+    dps:
+      - id: 34
+        type: boolean
+        name: switch
+
+  - entity: select
+    name: Rhythm Mode
+    category: config
+    dps:
+      - id: 30
+        type: string
+        name: option
+
+  - entity: select
+    name: Sleep Mode
+    category: config
+    dps:
+      - id: 31
+        type: string
+        name: option
+
+  - entity: select
+    name: Wakeup Mode
+    category: config
+    dps:
+      - id: 32
+        type: string
+        name: option
+
+  - entity: switch
+    name: Power Memory
+    category: config
+    dps:
+      - id: 33
+        type: boolean
+        name: switch
+        
+  - entity: switch
+    name: Remote Switch
+    category: config
+    dps:
+      - id: 41
+        type: boolean
+        name: switch
+
+  - entity: select
+    name: Cycle Timing
+    category: config
+    dps:
+      - id: 209
+        type: string
+        name: option
+
+  - entity: select
+    name: Random Timing
+    category: config
+    dps:
+      - id: 210
+        type: string
+        name: option
