@@ -85,45 +85,51 @@ entities:
     category: config
     dps:
       - id: 30
-        type: string
+        type: hex
         name: option
+        optional: true
 
   - entity: select
     name: Sleep Mode
     category: config
     dps:
       - id: 31
-        type: string
+        type: hex
         name: option
+        optional: true
 
   - entity: select
     name: Wakeup Mode
     category: config
     dps:
       - id: 32
-        type: string
+        type: hex
         name: option
+        optional: true
 
   - entity: switch
     name: Power Memory
     category: config
     dps:
       - id: 33
-        type: boolean
-        name: switch
+        type: hex
+        name: option
+        optional: true
 
   - entity: select
     name: Cycle Timing
     category: config
     dps:
       - id: 209
-        type: string
+        type: hex
         name: option
+        optional: true
 
   - entity: select
     name: Random Timing
     category: config
     dps:
       - id: 210
-        type: string
+        type: hex
         name: option
+        optional: true
