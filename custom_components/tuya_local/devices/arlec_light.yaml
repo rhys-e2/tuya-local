@@ -1,0 +1,112 @@
+name: LED Light
+products:
+  - id: 2un1bvpd3fqwq1w6
+    manufacturer: Arlec
+    model: Twinsel (2)
+    model_id: GLD312HA
+  - id: 94pamlryknqk3hif
+    manufacturer: Arlec
+    model: Twinsel (2)
+    model_id: GLD312HA
+  - id: qgibeqzjwdnn0rnf
+    manufacturer: Arlec
+    model: Twinsel (2)
+    model_id: GLD310HA
+entities:
+  - entity: light
+    dps:
+      - id: 20
+        type: boolean
+        name: switch
+      
+      - id: 21
+        type: string
+        name: color_mode
+        mapping:
+          - dps_val: white
+            value: white
+          - dps_val: colour
+            value: hs
+          - dps_val: scene
+            value: Scene
+          - dps_val: music
+            value: Music
+      
+      - id: 22
+        type: integer
+        name: brightness
+        range:
+          min: 10
+          max: 1000
+      
+      - id: 23
+        type: integer
+        name: color_temp
+        range:
+          min: 0
+          max: 1000
+      
+      - id: 25
+        type: json
+        name: scene_data
+      
+      - id: 28
+        type: json
+        name: control_data
+
+  - entity: number
+    name: Timer
+    class: duration
+    category: config
+    dps:
+      - id: 26
+        type: integer
+        name: value
+        unit: min
+        range:
+          min: 0
+          max: 86400
+        mapping:
+          - scale: 60
+          - step: 60
+
+  - entity: switch
+    name: Do Not Disturb
+    category: config
+    dps:
+      - id: 34
+        type: boolean
+        name: switch
+
+  # Optional additional features as separate entities
+  - entity: select
+    name: Rhythm Mode
+    category: config
+    dps:
+      - id: 30
+        type: string
+        name: option
+
+  - entity: select
+    name: Sleep Mode
+    category: config
+    dps:
+      - id: 31
+        type: string
+        name: option
+
+  - entity: select
+    name: Wakeup Mode
+    category: config
+    dps:
+      - id: 32
+        type: string
+        name: option
+
+  - entity: switch
+    name: Power Memory
+    category: config
+    dps:
+      - id: 33
+        type: boolean
+        name: switch
