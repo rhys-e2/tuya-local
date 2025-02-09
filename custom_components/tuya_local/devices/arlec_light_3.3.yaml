@@ -1,17 +1,11 @@
-name: LED Light
+name: Arlec RGBCW Light
 products:
   - id: 2un1bvpd3fqwq1w6
     manufacturer: Arlec
-    model: Twinsel (2)
+    model: GLD312HA Twinsel (2)
     model_id: GLD312HA
-  - id: 94pamlryknqk3hif
-    manufacturer: Arlec
-    model: Twinsel (2)
-    model_id: GLD312HA
-  - id: qgibeqzjwdnn0rnf
-    manufacturer: Arlec
-    model: Twinsel (2)
-    model_id: GLD310HA
+    name: Arlec RGBCW Smart Light 3.3
+
 entities:
   - entity: light
     dps:
@@ -24,13 +18,13 @@ entities:
         name: color_mode
         mapping:
           - dps_val: white
-            value: white
+            value: color_temp
           - dps_val: colour
             value: hs
           - dps_val: scene
-            value: Scene
+            value: scene
           - dps_val: music
-            value: Music
+            value: music
       
       - id: 22
         type: integer
@@ -38,6 +32,8 @@ entities:
         range:
           min: 10
           max: 1000
+        mapping:
+          - scale: 0.255  # Convert 10-1000 range to 0-255 HA range
       
       - id: 23
         type: integer
@@ -45,19 +41,25 @@ entities:
         range:
           min: 0
           max: 1000
-      
+        mapping:
+          - target_range:
+              min: 2700
+              max: 6500
+
       - id: 25
         type: json
         name: scene_data
-      
+        optional: true
+
       - id: 28
         type: json
         name: control_data
+        optional: true
 
   - entity: number
-    name: Timer
-    class: duration
+    name: countdown_timer
     category: config
+    class: duration
     dps:
       - id: 26
         type: integer
@@ -67,20 +69,19 @@ entities:
           min: 0
           max: 86400
         mapping:
-          - scale: 60
-          - step: 60
+          - scale: 60  # Convert seconds to minutes
+          - step: 60   # 1 minute steps
 
   - entity: switch
-    name: Do Not Disturb
+    name: do_not_disturb
     category: config
     dps:
       - id: 34
         type: boolean
         name: switch
 
-  # Optional additional features as separate entities
   - entity: select
-    name: Rhythm Mode
+    name: rhythm_mode
     category: config
     dps:
       - id: 30
@@ -88,7 +89,7 @@ entities:
         name: option
 
   - entity: select
-    name: Sleep Mode
+    name: sleep_mode
     category: config
     dps:
       - id: 31
@@ -96,7 +97,7 @@ entities:
         name: option
 
   - entity: select
-    name: Wakeup Mode
+    name: wakeup_mode
     category: config
     dps:
       - id: 32
@@ -104,9 +105,25 @@ entities:
         name: option
 
   - entity: switch
-    name: Power Memory
+    name: power_memory
     category: config
     dps:
       - id: 33
         type: boolean
         name: switch
+
+  - entity: select
+    name: cycle_timing
+    category: config
+    dps:
+      - id: 209
+        type: string
+        name: option
+
+  - entity: select
+    name: random_timing
+    category: config
+    dps:
+      - id: 210
+        type: string
+        name: option
