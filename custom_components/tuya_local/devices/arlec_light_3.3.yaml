@@ -82,54 +82,54 @@ entities:
 
   - entity: sensor
     name: Rhythm Mode
-    category: config
+    category: diagnostic
     dps:
       - id: 30
         type: hex
-        name: option
+        name: sensor
         optional: true
 
   - entity: sensor
     name: Sleep Mode
-    category: config
+    category: diagnostic
     dps:
       - id: 31
         type: hex
-        name: option
+        name: sensor
         optional: true
 
   - entity: sensor
     name: Wakeup Mode
-    category: config
+    category: diagnostic
     dps:
       - id: 32
         type: hex
-        name: option
+        name: sensor
         optional: true
 
   - entity: sensor
     name: Power Memory
-    category: config
+    category: diagnostic
     dps:
       - id: 33
         type: hex
-        name: option
+        name: sensor
         optional: true
 
   - entity: sensor
     name: Cycle Timing
-    category: config
+    category: diagnostic
     dps:
       - id: 209
         type: hex
-        name: option
+        name: sensor
         optional: true
 
   - entity: sensor
     name: Random Timing
-    category: config
+    category: diagnostic
     dps:
       - id: 210
         type: hex
-        name: option
+        name: sensor
         optional: true
