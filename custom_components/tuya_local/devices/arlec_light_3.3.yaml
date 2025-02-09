@@ -80,7 +80,7 @@ entities:
         type: boolean
         name: switch
 
-  - entity: select
+  - entity: sensor
     name: Rhythm Mode
     category: config
     dps:
@@ -89,7 +89,7 @@ entities:
         name: option
         optional: true
 
-  - entity: select
+  - entity: sensor
     name: Sleep Mode
     category: config
     dps:
@@ -98,7 +98,7 @@ entities:
         name: option
         optional: true
 
-  - entity: select
+  - entity: sensor
     name: Wakeup Mode
     category: config
     dps:
@@ -107,7 +107,7 @@ entities:
         name: option
         optional: true
 
-  - entity: switch
+  - entity: sensor
     name: Power Memory
     category: config
     dps:
@@ -116,7 +116,7 @@ entities:
         name: option
         optional: true
 
-  - entity: select
+  - entity: sensor
     name: Cycle Timing
     category: config
     dps:
@@ -125,7 +125,7 @@ entities:
         name: option
         optional: true
 
-  - entity: select
+  - entity: sensor
     name: Random Timing
     category: config
     dps:
