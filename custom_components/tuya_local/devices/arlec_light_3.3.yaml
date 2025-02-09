@@ -1,4 +1,4 @@
-name: Arlec RGBCW Light
+name: Arlec RGBCW Light 3.3
 products:
   - id: 2un1bvpd3fqwq1w6
     manufacturer: Arlec
@@ -57,7 +57,7 @@ entities:
         optional: true
 
   - entity: number
-    name: countdown_timer
+    name: Countdown Timer
     category: config
     class: duration
     dps:
@@ -73,7 +73,7 @@ entities:
           - step: 60   # 1 minute steps
 
   - entity: switch
-    name: do_not_disturb
+    name: Do Not Disturb
     category: config
     dps:
       - id: 34
@@ -81,7 +81,7 @@ entities:
         name: switch
 
   - entity: select
-    name: rhythm_mode
+    name: Rhythm Mode
     category: config
     dps:
       - id: 30
@@ -89,7 +89,7 @@ entities:
         name: option
 
   - entity: select
-    name: sleep_mode
+    name: Sleep Mode
     category: config
     dps:
       - id: 31
@@ -97,7 +97,7 @@ entities:
         name: option
 
   - entity: select
-    name: wakeup_mode
+    name: Wakeup Mode
     category: config
     dps:
       - id: 32
@@ -105,7 +105,7 @@ entities:
         name: option
 
   - entity: switch
-    name: power_memory
+    name: Power Memory
     category: config
     dps:
       - id: 33
@@ -113,7 +113,7 @@ entities:
         name: switch
 
   - entity: select
-    name: cycle_timing
+    name: Cycle Timing
     category: config
     dps:
       - id: 209
@@ -121,7 +121,7 @@ entities:
         name: option
 
   - entity: select
-    name: random_timing
+    name: Random Timing
     category: config
     dps:
       - id: 210
