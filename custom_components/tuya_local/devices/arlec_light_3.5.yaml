@@ -90,7 +90,7 @@ entities:
     category: diagnostic
     dps:
       - id: 30
-        type: hex
+        type: base64
         name: sensor
         optional: true
 
@@ -99,7 +99,7 @@ entities:
     category: diagnostic
     dps:
       - id: 31
-        type: hex
+        type: base64
         name: sensor
         optional: true
 
@@ -108,7 +108,7 @@ entities:
     category: diagnostic
     dps:
       - id: 32
-        type: hex
+        type: base64
         name: sensor
         optional: true
 
@@ -117,7 +117,7 @@ entities:
     category: diagnostic
     dps:
       - id: 33
-        type: hex
+        type: base64
         name: sensor
         optional: true
         
@@ -134,7 +134,7 @@ entities:
     category: diagnostic
     dps:
       - id: 209
-        type: hex
+        type: base64
         name: sensor
         optional: true
 
@@ -143,6 +143,6 @@ entities:
     category: diagnostic
     dps:
       - id: 210
-        type: hex
+        type: base64
         name: sensor
         optional: true
