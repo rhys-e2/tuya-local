@@ -15,6 +15,11 @@ entities:
       - id: 4
         name: direction
         type: string
+        mapping:
+          - dps_val: forward
+            value: forward
+          - dps_val: reverse
+            value: reverse
       - id: 102
         name: preset_mode
         type: string
