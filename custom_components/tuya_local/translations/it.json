@@ -75,7 +75,8 @@
         "setup_mode": {
             "options": {
                 "cloud": "Configurazione del dispositivo Smart Life assistita da cloud.",
-                "manual": "Inserisci manualmente le informazioni sulla connessione del dispositivo."
+                "manual": "Inserisci manualmente le informazioni sulla connessione del dispositivo.",
+                "cloud_fresh_login": "Configurazione del dispositivo Smart Life assistita da cloud con accesso fresco."
             }
         }
     },
@@ -163,6 +164,7 @@
         },
         "climate": {
             "aircon_extra": {
+                "name": "Climatizzatore",
                 "state_attributes": {
                     "fan_mode": {
                         "state": {
@@ -218,6 +220,7 @@
                 }
             },
             "swing_as_powerlevel": {
+                "name": "Stufa",
                 "state_attributes": {
                     "swing_mode": {
                         "name": "Livello di riscaldamento",
@@ -318,7 +321,19 @@
                     }
                 }
             },
+            "dehumidifier": {
+                "name": "Deumidificatore",
+                "state_attributes": {
+                    "preset_mode": {
+                        "state": {
+                            "purify": "Purifica",
+                            "dehumidify": "Deumidifica"
+                        }
+                    }
+                }
+            },
             "fan_with_presets": {
+                "name": "Ventilatore",
                 "state_attributes": {
                     "preset_mode": {
                         "state": {
@@ -329,6 +344,7 @@
                             "fresh": "Fresco",
                             "smart": "Intelligente",
                             "strong": "Forte",
+                            "custom": "Personalizzato",
                             "high": "Alto",
                             "medium": "Medio",
                             "low": "Basso",
@@ -396,12 +412,55 @@
             }
         },
         "select": {
+            "currency": {
+                "name": "Valuta",
+                "state": {
+                    "usd": "USD",
+                    "eur": "EUR",
+                    "cny": "CNY",
+                    "cad": "CAD",
+                    "gbp": "GBP"
+                }
+            },
+            "heat_pump_mode": {
+                "name": "Modalità pompa di calore",
+                "state": {
+                    "heat": "Riscaldamento",
+                    "cool": "Raffreddamento",
+                    "auto": "Auto",
+                    "floor_heat": "Riscaldamento pavimento",
+                    "off": "Spento",
+                    "hotwater": "Acqua calda",
+                    "hotwater_cool": "Acqua calda e raffreddamento",
+                    "hotwater_heat": "Acqua calda e riscaldamento",
+                    "hotwater_auto": "Acqua calda e auto",
+                    "hotwater_floor_heat": "Acqua calda e riscaldamento pavimento"
+                }
+            },
             "initial_state": {
                 "name": "Stato iniziale",
                 "state": {
                     "off": "Spento",
                     "on": "Acceso",
                     "memory": "Memoria"
+                }
+            },
+            "kettle_mode": {
+                "name": "Modalità bollitore",
+                "state": {
+                    "off": "Spento",
+                    "heat": "Riscaldamento",
+                    "boil": "Bollire",
+                    "quick_heat": "Riscaldamento rapido",
+                    "quick_boil": "Bollitura rapida",
+                    "keep_warm": "Mantenere caldo",
+                    "custom": "Personalizzato",
+                    "dechlorinate": "Decalcificazione",
+                    "black_tea": "Tè nero",
+                    "green_tea": "Tè verde",
+                    "coffee": "Caffè",
+                    "honey_water": "Acqua al miele",
+                    "infant_formula": "Formula per neonati"
                 }
             },
             "language": {
@@ -420,6 +479,15 @@
                     "russian": "Русский",
                     "spanish": "Español",
                     "turkish": "Türkçe"
+                }
+            },
+            "light_mode": {
+                "name": "Modalità luce",
+                "state": {
+                    "off": "Spento",
+                    "on": "Acceso",
+                    "state": "Stato",
+                    "locator": "Localizzatore"
                 }
             },
             "mopping": {
@@ -482,8 +550,15 @@
                 "name": "Timer",
                 "state": {
                     "cancel": "Annulla",
+                    "continuous": "Continuo",
+                    "30s": "30 secondi",
+                    "1m": "1 minuto",
+                    "2m": "2 minuti",
+                    "5m": "5 minuti",
                     "10m": "10 minuti",
+                    "20m": "20 minuti",
                     "30m": "30 minuti",
+                    "40m": "40 minuti",
                     "1h": "1 ora",
                     "1h30m": "1 ora 30 minuti",
                     "2h": "2 ore",
@@ -643,7 +718,16 @@
                     "close": "Chiudi",
                     "monitor": "Monitor",
                     "working": "Lavorando",
-                    "warning": "Attenzione"
+                    "warning": "Attenzione",
+                    "starting": "Inizio",
+                    "emptying": "Svuotamento",
+                    "resetting": "Ripristino",
+                    "reverse": "Inversione",
+                    "full": "Pieno",
+                    "empty": "Vuoto",
+                    "missing": "Mancante",
+                    "formatting": "Formattazione",
+                    "unformatted": "Non formattato"
                 }
             },
             "time_remaining": {
@@ -724,6 +808,22 @@
         "text": {
             "scene": {
                 "name": "Scena"
+            }
+        },
+        "time": {
+            "timer": {
+                "name": "Timer"
+            },
+            "timer_x": {
+                "name": "Timer {x}"
+            }
+        },            
+        "water_heater": {
+            "water_air": {
+                "name": "Scaldabagno"
+            },
+            "kettle": {
+                "name": "Bollitore"
             }
         }
     }

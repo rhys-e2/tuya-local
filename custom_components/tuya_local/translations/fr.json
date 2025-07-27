@@ -74,7 +74,8 @@
         "setup_mode": {
             "options": {
                 "cloud": "Configuration de l'appareil assistée par le cloud Smart Life.",
-                "manual": "Fournissez manuellement les informations de connexion de l’appareil."
+                "manual": "Fournissez manuellement les informations de connexion de l’appareil.",
+                "cloud_fresh_login": "Configuration de l'appareil assistée par le cloud Smart Life (nouvelle connexion)."
             }
         }
     },
@@ -162,6 +163,7 @@
         },
         "climate": {
             "aircon_extra": {
+                "name": "Climatiseur",
                 "state_attributes": {
                     "fan_mode": {
                         "state": {
@@ -217,6 +219,7 @@
                 }
             },
             "swing_as_powerlevel": {
+                "name": "Chauffage",
                 "state_attributes": {
                     "swing_mode": {
                         "name": "Niveau de chauffage",
@@ -317,7 +320,19 @@
                     }
                 }
             },
+            "dehumidifier": {
+                "name": "Déshumidificateur",
+                "state_attributes": {
+                    "preset_mode": {
+                        "state": {
+                            "purify": "Purifier",
+                            "dehumidify": "Déshumidifier"
+                        }
+                    }
+                }
+            },
             "fan_with_presets": {
+                "name": "Ventilateur",
                 "state_attributes": {
                     "preset_mode": {
                         "state": {
@@ -328,6 +343,7 @@
                             "fresh": "Frais",
                             "smart": "Intelligent",
                             "strong": "Fort",
+                            "custom": "Personnalisé",
                             "high": "Haut",
                             "medium": "Moyen",
                             "low": "Bas",
@@ -395,12 +411,55 @@
             }
         },
         "select": {
+            "currency": {
+                "name": "Devise",
+                "state": {
+                    "usd": "USD",
+                    "eur": "EUR",
+                    "cny": "CNY",
+                    "cad": "CAD",
+                    "gbp": "GBP"
+                }
+            },
+            "heat_pump_mode": {
+                "name": "Mode de pompe à chaleur",
+                "state": {
+                    "heat": "Chauffage",
+                    "cool": "Refroidissement",
+                    "auto": "Auto",
+                    "floor_heat": "Chauffage de sol",
+                    "off": "Éteint",
+                    "hotwater": "Eau chaude",
+                    "hotwater_cool": "Eau chaude et refroidissement",
+                    "hotwater_heat": "Eau chaude et chauffage",
+                    "hotwater_auto": "Eau chaude et auto",
+                    "hotwater_floor_heat": "Eau chaude et chauffage de sol"
+                }
+            },
             "initial_state": {
                 "name": "État initial",
                 "state": {
                     "off": "Désactivé",
                     "on": "Activé",
                     "memory": "Mémoire"
+                }
+            },
+            "kettle_mode": {
+                "name": "Mode Bouilloire",
+                "state": {
+                    "off": "Éteint",
+                    "heat": "Chauffage",
+                    "boil": "Ébullition",
+                    "quick_heat": "Chauffage rapide",
+                    "quick_boil": "Ébullition rapide",
+                    "keep_warm": "Garder au chaud",
+                    "custom": "Personnalisé",
+                    "dechlorinate": "Déschlorination",
+                    "black_tea": "Thé noir",
+                    "green_tea": "Thé vert",
+                    "coffee": "Café",
+                    "honey_water": "Eau au miel",
+                    "infant_formula": "Lait infantile"
                 }
             },
             "language": {
@@ -419,6 +478,15 @@
                     "russian": "Русский",
                     "spanish": "Español",
                     "turkish": "Türkçe"
+                }
+            },
+            "light_mode": {
+                "name": "Mode d'éclairage",
+                "state": {
+                    "off": "Éteint",
+                    "on": "Allumé",
+                    "state": "État",
+                    "locator": "Localisateur"
                 }
             },
             "mopping": {
@@ -481,8 +549,15 @@
                 "name": "Minuteur",
                 "state": {
                     "cancel": "Annuler",
+                    "continuous": "Continu",
+                    "30s": "30 secondes",
+                    "1m": "1 minute",
+                    "2m": "2 minutes",
+                    "5m": "5 minutes",
                     "10m": "10 minutes",
+                    "20m": "20 minutes",
                     "30m": "30 minutes",
+                    "40m": "40 minutes",
                     "1h": "1 heure",
                     "1h30m": "1 heure 30 minutes",
                     "2h": "2 heures",
@@ -642,7 +717,16 @@
                     "close": "Fermé",
                     "monitor": "Surveillance",
                     "working": "Travail",
-                    "warning": "Avertissement"
+                    "warning": "Avertissement",
+                    "starting": "Démarrage",
+                    "emptying": "Vidange",
+                    "resetting": "Réinitialisation",
+                    "reverse": "Inverser",
+                    "full": "Plein",
+                    "empty": "Vide",
+                    "missing": "Manquant",
+                    "formatting": "Formatage",
+                    "unformatted": "Non formaté"
                 }
             },
             "time_remaining": {
@@ -723,6 +807,22 @@
         "text": {
             "scene": {
                 "name": "Scène"
+            }
+        },
+        "time": {
+            "timer": {
+                "name": "Minuteur"
+            },
+            "timer_x": {
+                "name": "Minuteur {x}"
+            }
+        },
+        "water_heater": {
+            "water_air": {
+                "name": "Chauffe-eau"
+            },
+            "kettle": {
+                "name": "Bouilloire"
             }
         }
     }

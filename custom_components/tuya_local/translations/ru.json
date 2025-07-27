@@ -74,7 +74,8 @@
         "setup_mode": {
             "options": {
                 "cloud": "Настройка устройства с помощью облака Smart Life.",
-                "manual": "Вручную укажите информацию о подключении устройства."
+                "manual": "Вручную укажите информацию о подключении устройства.",
+                "cloud_fresh_login": "Войдите в другую учетную запись Smart Life или Tuya Smart."
             }
         }
     },
@@ -162,6 +163,7 @@
         },
         "climate": {
             "aircon_extra": {
+                "name": "Кондиционер",
                 "state_attributes": {
                     "fan_mode": {
                         "state": {
@@ -217,6 +219,7 @@
                 }
             },
             "swing_as_powerlevel": {
+                "name": "Обогреватель",
                 "state_attributes": {
                     "swing_mode": {
                         "name": "Уровень нагрева",
@@ -317,7 +320,19 @@
                     }
                 }
             },
+            "dehumidifier": {
+                "name": "Осушитель",
+                "state_attributes": {
+                    "preset_mode": {
+                        "state": {
+                            "purify": "Очистка",
+                            "dehumidify": "Осушение"
+                        }
+                    }
+                }
+            },
             "fan_with_presets": {
+                "name": "Вентилятор",
                 "state_attributes": {
                     "preset_mode": {
                         "state": {
@@ -328,6 +343,7 @@
                             "fresh": "Свежий",
                             "smart": "Умный",
                             "strong": "Мощный",
+                            "custom": "Пользовательский",
                             "high": "Высокий",
                             "medium": "Средний",
                             "low": "Низкий",
@@ -395,12 +411,55 @@
             }
         },
         "select": {
+            "currency": {
+                "name": "Валюта",
+                "state": {
+                    "usd": "USD",
+                    "eur": "EUR",
+                    "cny": "CNY",
+                    "cad": "CAD",
+                    "gbp": "GBP"
+                }
+            },
+            "heat_pump_mode": {
+                "name": "Режим теплового насоса",
+                "state": {
+                    "heat": "Нагрев",
+                    "cool": "Охлаждение",
+                    "auto": "Авто",
+                    "floor_heat": "Теплый пол",
+                    "off": "Выкл",
+                    "hotwater": "Горячая вода",
+                    "hotwater_cool": "Горячая вода и охлаждение",
+                    "hotwater_heat": "Горячая вода и нагрев",
+                    "hotwater_auto": "Горячая вода и авто",
+                    "hotwater_floor_heat": "Горячая вода и теплый пол"
+                }
+            },
             "initial_state": {
                 "name": "Начальное состояние",
                 "state": {
                     "off": "Выкл",
                     "on": "Вкл",
                     "memory": "Память"
+                }
+            },
+            "kettle_mode": {
+                "name": "Режим чайника",
+                "state": {
+                    "off": "Выкл",
+                    "heat": "Нагрев",
+                    "boil": "Кипячение",
+                    "quick_heat": "Быстрый нагрев",
+                    "quick_boil": "Быстрое кипячение",
+                    "keep_warm": "Поддержание тепла",
+                    "custom": "Пользовательский",
+                    "dechlorinate": "Дехлорирование",
+                    "black_tea": "Черный чай",
+                    "green_tea": "Зеленый чай",
+                    "coffee": "Кофе",
+                    "honey_water": "Медовая вода",
+                    "infant_formula": "Детская смесь"
                 }
             },
             "language": {
@@ -419,6 +478,15 @@
                     "russian": "Русский",
                     "spanish": "Español",
                     "turkish": "Türkçe"
+                }
+            },
+            "light_mode": {
+                "name": "Режим освещения",
+                "state": {
+                    "off": "Выкл",
+                    "on": "Вкл",
+                    "state": "Состояние",
+                    "locator": "Локатор"
                 }
             },
             "mopping": {
@@ -481,8 +549,15 @@
                 "name": "Таймер",
                 "state": {
                     "cancel": "Отмена",
+                    "continuous": "Непрерывный",
+                    "30s": "30 секунд",
+                    "1m": "1 минута",
+                    "2m": "2 минуты",
+                    "5m": "5 минут",
                     "10m": "10 минут",
+                    "20m": "20 минут",
                     "30m": "30 минут",
+                    "40m": "40 минут",
                     "1h": "1 час",
                     "1h30m": "1 час 30 минут",
                     "2h": "2 часа",
@@ -642,7 +717,16 @@
                     "close": "Закрыто",
                     "monitor": "Мониторинг",
                     "working": "Работает",
-                    "warning": "Предупреждение"
+                    "warning": "Предупреждение",
+                    "starting": "Запуск",
+                    "emptying": "Опорожнение",
+                    "resetting": "Сброс",
+                    "reverse": "Реверс",
+                    "full": "Полный",
+                    "empty": "Пустой",
+                    "missing": "Отсутствует",
+                    "formatting": "Форматирование",
+                    "unformatted": "Не отформатировано"
                 }
             },
             "time_remaining": {
@@ -723,6 +807,22 @@
         "text": {
             "scene": {
                 "name": "Сцена"
+            }
+        },
+        "time": {
+            "timer": {
+                "name": "Таймер"
+            },
+            "timer_x": {
+                "name": "Таймер {x}"
+            }
+        },
+        "water_heater": {
+            "water_air": {
+                "name": "Водонагреватель"
+            },
+            "kettle": {
+                "name": "Чайник"
             }
         }
     }

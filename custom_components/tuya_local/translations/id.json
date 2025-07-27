@@ -74,7 +74,8 @@
         "setup_mode": {
             "options": {
                 "cloud": "Penyiapan perangkat berbantuan cloud Smart Life.",
-                "manual": "Berikan informasi koneksi perangkat secara manual."
+                "manual": "Berikan informasi koneksi perangkat secara manual.",
+                "cloud_fresh_login": "Penyiapan perangkat berbantuan cloud Smart Life dengan login baru."
             }
         }
     },
@@ -162,6 +163,7 @@
         },
         "climate": {
             "aircon_extra": {
+                "name": "AC",
                 "state_attributes": {
                     "fan_mode": {
                         "state": {
@@ -217,6 +219,7 @@
                 }
             },
             "swing_as_powerlevel": {
+                "name": "Pemanas",
                 "state_attributes": {
                     "swing_mode": {
                         "name": "Level Pemanasan",
@@ -317,7 +320,19 @@
                     }
                 }
             },
+            "dehumidifier": {
+                "name": "Pengering",
+                "state_attributes": {
+                    "preset_mode": {
+                        "state": {
+                            "purify": "Penjernih",
+                            "dehumidify": "Pengering"
+                        }
+                    }
+                }
+            },
             "fan_with_presets": {
+                "name": "Kipas",
                 "state_attributes": {
                     "preset_mode": {
                         "state": {
@@ -328,6 +343,7 @@
                             "fresh": "Segar",
                             "smart": "Pintar",
                             "strong": "Kencang",
+                            "custom": "Kustom",
                             "high": "Tinggi",
                             "medium": "Sedang",
                             "low": "Rendah",
@@ -395,12 +411,55 @@
             }
         },
         "select": {
+            "currency": {
+                "name": "Mata uang",
+                "state": {
+                    "usd": "USD",
+                    "eur": "EUR",
+                    "cny": "CNY",
+                    "cad": "CAD",
+                    "gbp": "GBP"
+                }
+            },
+            "heat_pump_mode": {
+                "name": "Mode pompa panas",
+                "state": {
+                    "heat": "Pemanas",
+                    "cool": "Pendingin",
+                    "auto": "Otomatis",
+                    "floor_heat": "Pemanas lantai",
+                    "off": "Mati",
+                    "hotwater": "Air panas",
+                    "hotwater_cool": "Pendingin air panas",
+                    "hotwater_heat": "Pemanas air panas",
+                    "hotwater_auto": "Otomatis air panas",
+                    "hotwater_floor_heat": "Pemanas lantai air panas"
+                }
+            },
             "initial_state": {
                 "name": "Status awal",
                 "state": {
                     "off": "Mati",
                     "on": "Hidup",
                     "memory": "Memori"
+                }
+            },
+            "kettle_mode": {
+                "name": "Mode ketel",
+                "state": {
+                    "off": "Mati",
+                    "heat": "Pemanas",
+                    "boil": "Mendidih",
+                    "quick_heat": "Pemanasan cepat",
+                    "quick_boil": "Mendidih cepat",
+                    "keep_warm": "Tetap hangat",
+                    "custom": "Kustom",
+                    "dechlorinate": "Deklorinasi",
+                    "black_tea": "Teh hitam",
+                    "green_tea": "Teh hijau",
+                    "coffee": "Kopi",
+                    "honey_water": "Air madu",
+                    "infant_formula": "Susu formula bayi"
                 }
             },
             "language": {
@@ -419,6 +478,15 @@
                     "russian": "Русский",
                     "spanish": "Español",
                     "turkish": "Türkçe"
+                }
+            },
+            "light_mode": {
+                "name": "Mode lampu",
+                "state": {
+                    "off": "Mati",
+                    "on": "Hidup",
+                    "state": "Status",
+                    "locator": "Penanda"
                 }
             },
             "mopping": {
@@ -481,8 +549,15 @@
                 "name": "Pengatur waktu",
                 "state": {
                     "cancel": "Batal",
+                    "continuous": "Terus menerus",
+                    "30s": "30 detik",
+                    "1m": "1 menit",
+                    "2m": "2 menit",
+                    "5m": "5 menit",
                     "10m": "10 menit",
+                    "20m": "20 menit",
                     "30m": "30 menit",
+                    "40m": "40 menit",
                     "1h": "1 jam",
                     "1h30m": "1 jam 30 menit",
                     "2h": "2 jam",
@@ -642,7 +717,16 @@
                     "close": "Tutup",
                     "monitor": "Pemantauan",
                     "working": "Bekerja",
-                    "warning": "Peringatan"
+                    "warning": "Peringatan",
+                    "starting": "Memulai",
+                    "emptying": "Mengosongkan",
+                    "resetting": "Merestart",
+                    "reverse": "Mundur",
+                    "full": "Penuh",
+                    "empty": "Kosong",
+                    "missing": "Hilang",
+                    "formatting": "Memformat",
+                    "unformatted": "Belum diformat"
                 }
             },
             "time_remaining": {
@@ -723,6 +807,22 @@
         "text": {
             "scene": {
                 "name": "Adegan"
+            }
+        },
+        "time": {
+            "timer": {
+                "name": "Pengatur waktu"
+            },
+            "timer_x": {
+                "name": "Pengatur waktu {x}"
+            }
+        },
+        "water_heater": {
+            "water_air": {
+                "name": "Pemanas air"
+            },
+            "kettle": {
+                "name": "Ketel"
             }
         }
     }

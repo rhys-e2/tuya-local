@@ -74,7 +74,8 @@
         "setup_mode": {
             "options": {
                 "cloud": "Smart Life云辅助设备设置。",
-                "manual": "手动提供设备连接信息。"
+                "manual": "手动提供设备连接信息。",
+                "cloud_fresh_login": "Smart Life云辅助设备设置（新登录）。"
             }
         }
     },
@@ -162,6 +163,7 @@
         },
         "climate": {
             "aircon_extra": {
+                "name": "空调",
                 "state_attributes": {
                     "fan_mode": {
                         "state": {
@@ -217,6 +219,7 @@
                 }
             },
             "swing_as_powerlevel": {
+                "name": "加热器",
                 "state_attributes": {
                     "swing_mode": {
                         "name": "加热水平",
@@ -317,7 +320,19 @@
                     }
                 }
             },
+            "dehumidifier": {
+                "name": "除湿机",
+                "state_attributes": {
+                    "preset_mode": {
+                        "state": {
+                            "purify": "净化",
+                            "dehumidify": "除湿"
+                        }
+                    }
+                }
+            },
             "fan_with_presets": {
+                "name": "风扇",
                 "state_attributes": {
                     "preset_mode": {
                         "state": {
@@ -328,6 +343,7 @@
                             "sleep": "睡眠",
                             "smart": "智能",
                             "strong": "强劲",
+                            "custom": "自定义",
                             "high": "高",
                             "medium": "中",
                             "low": "低",
@@ -395,12 +411,55 @@
             }
         },
         "select": {
+            "currency": {
+                "name": "货币",
+                "state": {
+                    "usd": "美元",
+                    "eur": "欧元",
+                    "cny": "人民币",
+                    "cad": "加元",
+                    "gbp": "英镑"
+                }
+            },
+            "heat_pump_mode": {
+                "name": "热泵模式",
+                "state": {
+                    "heat": "加热",
+                    "cool": "制冷",
+                    "auto": "自动",
+                    "floor_heat": "地板加热",
+                    "off": "关闭",
+                    "hotwater": "热水",
+                    "hotwater_cool": "热水制冷",
+                    "hotwater_heat": "热水加热",
+                    "hotwater_auto": "热水自动",
+                    "hotwater_floor_heat": "热水地板加热"
+                }
+            },
             "initial_state": {
                 "name": "初始状态",
                 "state": {
                     "off": "关闭",
                     "on": "打开",
                     "memory": "记忆"
+                }
+            },
+            "kettle_mode": {
+                "name": "电热水壶模式",
+                "state": {
+                    "off": "关闭",
+                    "heat": "加热",
+                    "boil": "煮沸",
+                    "quick_heat": "快速加热",
+                    "quick_boil": "快速煮沸",
+                    "keep_warm": "保温",
+                    "custom": "自定义",
+                    "dechlorinate": "除氯",
+                    "black_tea": "红茶",
+                    "green_tea": "绿茶",
+                    "coffee": "咖啡",
+                    "honey_water": "蜂蜜水",
+                    "infant_formula": "婴儿配方"
                 }
             },
             "language": {
@@ -419,6 +478,15 @@
                     "russian": "Русский",
                     "spanish": "Español",
                     "turkish": "Türkçe"
+                }
+            },
+            "light_mode": {
+                "name": "灯光模式",
+                "state": {
+                    "off": "关闭",
+                    "on": "打开",
+                    "state": "状态",
+                    "locator": "定位"
                 }
             },
             "mopping": {
@@ -481,8 +549,15 @@
                 "name": "计时器",
                 "state": {
                     "cancel": "取消",
+                    "continuous": "连续",
+                    "30s": "30秒",
+                    "1m": "1分钟",
+                    "2m": "2分钟",
+                    "5m": "5分钟",
                     "10m": "10分钟",
+                    "20m": "20分钟",
                     "30m": "30分钟",
+                    "40m": "40分钟",
                     "1h": "1小时",
                     "1h30m": "1小时30分钟",
                     "2h": "2小时",
@@ -642,7 +717,16 @@
                     "close": "关闭",
                     "monitor": "监控中",
                     "working": "工作中",
-                    "warning": "警告"
+                    "warning": "警告",
+                    "starting": "启动中",
+                    "emptying": "排空中",
+                    "resetting": "重置中",
+                    "reverse": "反转中",
+                    "full": "已满",
+                    "empty": "已空",
+                    "missing": "缺失",
+                    "formatting": "格式化中",
+                    "unformatted": "未格式化"
                 }
             },
             "time_remaining": {
@@ -723,6 +807,22 @@
         "text": {
             "scene": {
                 "name": "场景"
+            }
+        },
+        "time": {
+            "timer": {
+                "name": "计时器"
+            },
+            "timer_x": {
+                "name": "计时器{x}"
+            }
+        },
+        "water_heater": {
+            "water_air": {
+                "name": "热水器"
+            },
+            "kettle": {
+                "name": "电热水壶"
             }
         }
     }

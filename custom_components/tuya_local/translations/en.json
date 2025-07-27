@@ -74,7 +74,8 @@
         "setup_mode": {
             "options": {
                 "cloud": "Smart Life cloud-assisted device setup.",
-                "manual": "Manually provide device connection information."
+                "manual": "Manually provide device connection information.",
+                "cloud_fresh_login": "Smart Life cloud-assisted device setup with fresh login."
             }
         }
     },
@@ -162,6 +163,7 @@
         },
         "climate": {
             "aircon_extra": {
+                "name": "Air conditioner",
                 "state_attributes": {
                     "fan_mode": {
                         "state": {
@@ -217,6 +219,7 @@
                 }
             },
             "swing_as_powerlevel": {
+                "name": "Heater",
                 "state_attributes": {
                     "swing_mode": {
                         "name": "Heating level",
@@ -317,7 +320,19 @@
                     }
                 }
             },
+            "dehumidifier": {
+                "name": "Dehumidifier",
+                "state_attributes": {
+                    "preset_mode": {
+                        "state": {
+                            "purify": "Purify",
+                            "dehumidify": "Dehumidify"
+                        }
+                    }
+                }
+            },
             "fan_with_presets": {
+                "name": "Fan",
                 "state_attributes": {
                     "preset_mode": {
                         "state": {
@@ -328,6 +343,7 @@
                             "sleep": "Sleep",
                             "smart": "Smart",
                             "strong": "Strong",
+                            "custom": "Custom",
                             "high": "High",
                             "medium": "Medium",
                             "low": "Low",
@@ -395,12 +411,55 @@
             }
         },
         "select": {
+            "currency": {
+                "name": "Currency",
+                "state": {
+                    "usd": "USD",
+                    "eur": "EUR",
+                    "cny": "CNY",
+                    "cad": "CAD",
+                    "gbp": "GBP"
+                }
+            },
+            "heat_pump_mode": {
+                "name": "Heat pump mode",
+                "state": {
+                    "off": "Off",
+                    "heat": "Heat",
+                    "cool": "Cool",
+                    "floor_heat": "Floor heat",
+                    "auto": "Auto",
+                    "hotwater": "Hot water",
+                    "hotwater_cool": "Hot water & Cool",
+                    "hotwater_heat": "Hot water & Heat",
+                    "hotwater_auto": "Hot water & Auto",
+                    "hotwater_floor_heat": "Hot water & Floor heat"
+                }
+            },
             "initial_state": {
                 "name": "Initial state",
                 "state": {
                     "off": "Off",
                     "on": "On",
                     "memory": "Memory"
+                }
+            },
+            "kettle_mode": {
+                "name": "Kettle mode",
+                "state": {
+                    "off": "Off",
+                    "heat": "Heat",
+                    "boil": "Boil",
+                    "quick_heat": "Quick heat",
+                    "quick_boil": "Quick boil",
+                    "keep_warm": "Keep warm",
+                    "custom": "Custom",
+                    "dechlorinate": "Dechlorinate",
+                    "black_tea": "Black tea",
+                    "green_tea": "Green tea",
+                    "coffee": "Coffee",
+                    "honey_water": "Honey water",
+                    "infant_formula": "Infant formula"
                 }
             },
             "language": {
@@ -419,6 +478,15 @@
                     "russian": "Русский",
                     "spanish": "Español",
                     "turkish": "Türkçe"
+                }
+            },
+            "light_mode": {
+                "name": "Light mode",
+                "state": {
+                    "off": "Off",
+                    "on": "On",
+                    "state": "State",
+                    "locator": "Locator"
                 }
             },
             "mopping": {
@@ -481,8 +549,15 @@
                 "name": "Timer",
                 "state": {
                     "cancel": "Cancel",
+                    "continuous": "Continuous",
+                    "30s": "30 seconds",
+                    "1m": "1 minute",
+                    "2m": "2 minutes",
+                    "5m": "5 minutes",
                     "10m": "10 minutes",
+                    "20m": "20 minutes",
                     "30m": "30 minutes",
+                    "40m": "40 minutes",
                     "1h": "1 hour",
                     "1h30m": "1 hour 30 minutes",
                     "2h": "2 hours",
@@ -642,7 +717,16 @@
                     "close": "Close",
                     "monitor": "Monitor",
                     "working": "Working",
-                    "warning": "Warning"
+                    "warning": "Warning",
+                    "starting": "Starting",
+                    "emptying": "Emptying",
+                    "resetting": "Resetting",
+                    "reverse": "Reverse",
+                    "full": "Full",
+                    "empty": "Empty",
+                    "missing": "Missing",
+                    "formatting": "Formatting",
+                    "unformatted": "Unformatted"
                 }
             },
             "time_remaining": {
@@ -723,6 +807,22 @@
         "text": {
             "scene": {
                 "name": "Scene"
+            }
+        },
+        "time": {
+            "timer": {
+                "name": "Timer"
+            },
+            "timer_x": {
+                "name": "Timer {x}"
+            }
+        },
+        "water_heater": {
+            "water_air": {
+                "name": "Water heater"
+            },
+            "kettle": {
+                "name": "Kettle"
             }
         }
     }
